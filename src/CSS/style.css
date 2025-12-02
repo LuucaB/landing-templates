@@ -3,48 +3,160 @@
 
 :root {
     --color-ligth-text: #fff;
-    --bg-base: #202833;
+    --bg-base: #fff;
+    --bg-dark: linear-gradient(190deg, #202833 ,#28374a);
     --color-secondary: #d1af6b;
+
 }
 
 * {
-    color: var(--color-secondary);
+    color: var(--color-ligth-text);
     margin: 0;
     font-family: "Syne", sans-serif;
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
+    box-sizing: border-box;
 }
 
 body {
-    background-color: var(--bg-base);
-    padding: 12px;
+    background-color: var(--bg-ligth);
+}
+header {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+    background-color: #202833b2;
 }
 
+header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url(/landing-templates/src/Img/bg-banner2.jpg);
+    background-size: cover;
+    background-position: center;
+    filter: blur(8px);
+    transform: scale(1.05);
+    border-radius: inherit;
+    z-index: -1;
+}
+
+/* Logo */
 .conteiner-logo {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 10px;
+    background-color: #20283375;
+    box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.164);
 }
 
 .logo-control {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
+
     overflow: hidden;
-    padding: 0 24px;
+    padding: 0 12px;
     gap: 10px;
+}
+
+.logo-control h1 {
+    color: var(--color-secondary);
 }
 
 .logo {
     object-fit: cover;
     width: 100%;
-    width: 80px;
-    height: 80px;
+    width: 30px;
+    height: 30px;
 }
 
 .logo-control h1 {
-    font-size: 2rem;
+    font-size: 1.2rem;
 }
+
+.logo-control span {
+    height: 30px;
+    width: 2px;
+    background-color: var(--color-secondary);
+}
+/* Fim - Logo */
+
+/* Navegação */
+
+/* nav {
+    
+} */
+
+nav .nav_group {
+    padding: 0 12px;
+}
+
+nav .nav_group ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    font-size: 1.2rem;
+    gap: 30px;
+}
+
+nav .nav_group ul li.active {
+    color: var(--color-secondary);
+    position: relative;
+}
+
+nav .nav_group ul li.active::after {
+    content: "";
+    width: 100%;
+    background-color: #d1af6b;
+    position: absolute;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+}
+/* Fim - Navegação */
+
+/* Icone Whatsapp */
+.contact .whatsapp{
+    width: 220px;
+}
+
+.contact .whatsapp button{
+    width: 100%;
+    height: 60px;
+    font-size: 1.2rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+/* Fim - Icone Whatsapp */
+
+/* Banner */
+
+
+.conteiner-banner {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+.conteiner-banner .title{
+    font-size: 3em;
+    display: flex;
+    width: 70%;
+    text-align: center;
+}
+/* Fim - Banner */
+
+/* Main */
+
+
+
+/* Fim - Main */
+
+
