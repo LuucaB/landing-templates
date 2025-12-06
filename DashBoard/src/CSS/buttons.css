@@ -1,0 +1,45 @@
+.btn {
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.btn-exit {
+    position: absolute;
+    background-color: transparent;
+    font-size: 20px;
+    right: 20px;
+    top: 0px;
+    padding: 0;
+}
+
+.btn-logout {
+    background-color: #ff6d1f;
+    padding: 12px;
+    width: 100%;
+    color: #fff;
+    transition: all 0.3s;
+}
+
+.btn-logout:hover {
+    background-color: #d44a00;
+    color: #fff;
+}
+
+.btn-logout:active {
+    background-color: #ff6d1f;
+    color: #fff;
+}
+
+.btn-back {
+    font-size: 20px;
+    transform: scaleX(-1);
+    padding: 5px 10px;
+    color: #1b2632;
+}
+
+.btn-go {
+    font-size: 20px;
+    padding: 5px 10px;
+    color: #1b2632;
+}

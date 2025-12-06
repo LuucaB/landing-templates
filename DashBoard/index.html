@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Link Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Css -->
+    <link rel="stylesheet" href="/src/CSS/style.css">
+    <link rel="stylesheet" href="/src/CSS/buttons.css">
+
+</head>
+
+<body>
+    <aside>
+        <div class="menu">
+            <div class="menu-title">
+                <h2><i class="fa-solid fa-circle-user"></i> Nome Empresa</h2>
+                <button onclick="closeSidebar()"><i class="fa-solid fa-x"></i></button>
+            </div>
+
+            <span class="div"></span>
+
+            <div class="category">
+                <div class="search">
+                    <input type="search" placeholder="Pesquisar">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+
+                <ul class="category-list">
+                    <a href="#">
+                        <li class="active">
+                            <i class="fa-solid fa-house"></i>
+                            <h3>Home</h3>
+                        </li>
+                    </a>
+
+                    <a href="#">
+                        <li class="list">
+                            <i class="fa-solid fa-money-bill"></i>
+                            <h3>Vendas</h3>
+                        </li>
+                    </a>
+
+                    <a href="#">
+                        <li class="list">
+                            <i class="fa-solid fa-suitcase"></i>
+                            <h3>Produtos</h3>
+                        </li>
+                    </a>
+
+                    <a href="#">
+                        <li class="list">
+                            <i class="fa-solid fa-gear"></i>
+                            <h3>Descontos</h3>
+                        </li>
+                    </a>
+
+                    <a href="#">
+                        <li class="list">
+                            <i class="fa-solid fa-file"></i>
+                            <h3>Historico de vendas</h3>
+                        </li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+        <div class="logout">
+            <button class="btn btn-logout">
+                <h2><i class="fa-solid fa-right-to-bracket"></i> Logout</h2>
+            </button>
+        </div>
+    </aside>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-title">
+                <button onclick="sideBar()" class="bar"><i class="fa-solid fa-bars"></i></button>
+                <h1>Dashboard</h1>
+            </div>
+            <div class="navbar-inf">
+                <a href="#" class="car"><i class="fa-solid fa-cart-shopping"></i></a>
+                <a href="#" class="mensagem"><i class="fa-solid fa-comment"></i></a>
+                <a href="#" class="config"><i class="fa-solid fa-gear"></i></a>
+                <!-- <a href="#" class="modo_dark" onclick="mudarCor()"><i class="fa-solid fa-moon"></i></a> -->
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="parent">
+            <div class="div1">
+                <div class="icon-inf">
+                    <i class="fa-solid fa-money-bill"></i>
+                    <a href="#"><i class="fa-solid fa-share-from-square"></i></a>
+                </div>
+                <div class="card-inf">
+                    <h3>Total de Vendas</h3>
+                    <label>R$ 60.000,00</label>
+                </div>
+
+            </div>
+
+            <div class="div2">
+                <div class="icon-inf">
+                    <i class="fa-solid fa-pen-to-square"></i>
+                    <a href="#"><i class="fa-solid fa-share-from-square"></i></a>
+                </div>
+                <div class="card-inf">
+                    <h3>Produtos Cadastrados</h3>
+                    <label>5.000</label>
+                </div>
+            </div>
+
+            <div class="div3">
+                <div class="icon-inf">
+                    <i class="fa-solid fa-users"></i>
+                    <a href="#"><i class="fa-solid fa-share-from-square"></i></a>
+                </div>
+                <div class="card-inf">
+                    <h3>Usuários</h3>
+                    <label>3.000</label>
+                </div>
+            </div>
+
+            <div class="div4">
+                <div class="icon-inf">
+                    <i class="fa-solid fa-star"></i>
+                    <a href="#"><i class="fa-solid fa-share-from-square"></i></a>
+                </div>
+                <div class="card-inf">
+                    <h3>Produtos mais vendidos</h3>
+                    <div class="table-wrapper">
+                        <table>
+                            <tr class="t-header">
+                                <th>Id</th>
+                                <th>Produto</th>
+                                <th>Valor</th>
+                                <th>Status</th>
+                            </tr>
+                            <tr>
+                                <td>01</td>
+                                <td>Nome Produto</td>
+                                <td>R$ Valor</td>
+                                <td><span class="status-desativo">Sem estoque</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>02</td>
+                                <td>Nome Produto</td>
+                                <td>R$ Valor</td>
+                                <td><span class="status-ativo">Em estoque</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>03</td>
+                                <td>Nome Produto</td>
+                                <td>R$ Valor</td>
+                                <td><span class="status-ativo">Em estoque</span></td>
+                            </tr>
+                            <tr>
+                                <td>04</td>
+                                <td>Nome Produto</td>
+                                <td>R$ Valor</td>
+                                <td><span class="status-ativo">Em estoque</span></td>
+                            </tr>
+                            <tr>
+                                <td>05</td>
+                                <td>Nome Produto</td>
+                                <td>R$ Valor</td>
+                                <td> <span class="status-ativo">Em estoque</span></td>
+                            </tr>
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="div5">
+                <div class="icon-inf">
+                    <i class="fa-solid fa-briefcase"></i>
+                    <a href="#"><i class="fa-solid fa-share-from-square"></i></a>
+                </div>
+                <div class="card-inf">
+                    <div class="card-title-enterprise">
+                        <h3>Empresas</h3>
+                        <div>
+                            <button class="btn btn-back"><i class="fa-solid fa-arrow-right"></i></button>
+                            <button class="btn btn-go"><i class="fa-solid fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+                    <div class="cards-group">
+                        <div class="card-enterprise">
+                            <div class="conteiner-img-enterprise">
+                                <img src="/src/IMG/empresa.jpg">
+                            </div>
+                            <h2>Empresa Nome</h2>
+                        </div>
+
+                        <div class="card-enterprise">
+                            <div class="conteiner-img-enterprise">
+                                <img src="/src/IMG/empresa.jpg">
+                            </div>
+                            <h2>Empresa Nome</h2>
+                        </div>
+
+                        <div class="card-enterprise">
+                            <div class="conteiner-img-enterprise">
+                                <img src="/src/IMG/empresa.jpg">
+                            </div>
+                            <h2>Empresa Nome</h2>
+                        </div>
+
+                        <div class="card-enterprise">
+                            <div class="conteiner-img-enterprise">
+                                <img src="/src/IMG/empresa.jpg">
+                            </div>
+                            <h2>Empresa Nome</h2>
+                        </div>
+
+                        <div class="card-enterprise">
+                            <div class="conteiner-img-enterprise">
+                                <img src="/src/IMG/empresa.jpg">
+                            </div>
+                            <h2>Empresa Nome</h2>
+                        </div>
+                        <div class="card-enterprise">
+                            <div class="conteiner-img-enterprise">
+                                <img src="/src/IMG/empresa.jpg">
+                            </div>
+                            <h2>Empresa Nome</h2>
+                        </div>
+                        <div class="card-enterprise">
+                            <div class="conteiner-img-enterprise">
+                                <img src="/src/IMG/empresa.jpg">
+                            </div>
+                            <h2>Empresa Nome</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a class="div6" href="#">
+                <div class="cad-producto">
+                    <h2><i class="fa-solid fa-plus"></i> Cadastrar novo produto</h2>
+                </div>
+            </a>
+
+            <div class="div7">
+                <div class="icon-inf">
+                    <i class="fa-solid fa-file"></i>
+                    <a href="#"><i class="fa-solid fa-share-from-square"></i></a>
+                </div>
+                <div class="card-inf">
+                    <h3>Notas Fiscais</h3>
+                    <label>7.000</label>
+                </div>
+            </div>
+
+            <div class="div8">
+                <div class="icon-inf">
+                    <i class="fa-solid fa-file"></i>
+                    <a href="#"><i class="fa-solid fa-share-from-square"></i></a>
+                </div>
+                <div class="card-inf">
+                    <h3>Notas Fiscais</h3>
+                    <label>7.000</label>
+                </div>
+            </div>
+
+            <div class="div9">
+                <div class="icon-inf">
+                    <i class="fa-solid fa-file"></i>
+                    <a href="#"><i class="fa-solid fa-share-from-square"></i></a>
+                </div>
+                <div class="card-inf">
+                    <h3>Notas Fiscais</h3>
+                    <label>7.000</label>
+                </div>
+            </div>
+
+            <div class="div10">
+                <div class="icon-inf">
+                    <i class="fa-solid fa-comment"></i>
+                    <a href="#"><i class="fa-solid fa-share-from-square"></i></a>
+                </div>
+                <div class="card-inf">
+                    <h3>Último comentário</h3>
+                    <div class="comment-card">
+                        <div class="comment-header">
+                            <img src="https://i.pravatar.cc/100" alt="user" class="comment-avatar">
+                            <div class="comment-user">
+                                <h3>Lucas Barreto</h3>
+                                <div class="stars">
+                                    ★ 5.0
+                                </div>
+                            </div>
+                        </div>
+
+                        <p class="comment-text">
+                            Excelente plataforma! A interface é super intuitiva, rápida e fácil de usar.
+                            Recomendo demais para quem quer produtividade no dia a dia.
+                        </p>
+
+                        <span class="comment-date">12 de Fevereiro de 2025</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="div11">
+                <div class="icon-inf">
+                    <div>
+                        <i class="fa-solid fa-file"></i>
+                        <h3> Empresas que mais vendem</h3>
+                    </div>
+                    <a href="#"><i class="fa-solid fa-share-from-square"></i></a>
+                </div>
+                <div class="card-inf">
+                    <div class="card-inf-intem">
+                        <div>
+                            <img src="">
+                        </div>
+                    </div>
+                    <div class="card-inf-item"></div>
+                    <div class="card-inf-item"></div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <footer></footer>
+
+    <!-- Js -->
+    <script src="/src/JS/scripts.js"></script>
+</body>
+
+</html>
