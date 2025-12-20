@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=BBH+Bartle&family=Oswald:wght@200..700&display=swap');
+
+
+
+:root {
+
+    /* Background body */
+    --bg-body: line;
+    --bg-body-dark: #1E1E1E;
+    /* Fim - Background body */
+
+    /* Cores Primarias */
+    --color-primary: #ffc757;
+    /* Fim - Cores Primarias */
+
+    /* Cores Secundarias */
+
+    /* Fim - Cores Secundarias */
+
+    /* Cores Textos */
+    --color-text-dark: #1E1E1E;
+    --color-text-light: #ffffff;
+
+    /* Fim - Cores Textos */
+
+    /* Transições */
+    --transition-fast: all 0.3s ease;
+    --transition-lower: all 1s ease;
+    /* Fim - Transições */
+
+    --color-text-hover: #ffc757;
+
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    color: var(--color-text-light);
+}
+
+body {
+    background-color: var(--bg-body-dark);
+    display: flex;
+    padding: 24px;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.conteiner {
+    display: flex;
+    justify-content: center;
+    padding: 24px;
+    width: 100%;
+    animation: name duration timing-function delay iteration-count direction fill-mode;
+}
+
+.row-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 500px;
+}
+
+.title {
+    width: 100%;
+    text-align: start;
+    margin-bottom: 10px;
+
+    & h1 {
+        font-family: "BBH Bartle", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+    }
+}
+
+.input_name,
+.input_password {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+}
+
+.input_name label,
+.input_password label {
+    transition: var(--transition-fast);
+    transform: translateY(30px);
+    pointer-events: none;
+}
+
+.input_name label,
+.input_password label {
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    transform: translateY(-50%);
+    transition: var(--transition-fast);
+    pointer-events: none;
+}
+
+/* Quando o input está em foco OU preenchido */
+.input_name:has(input:focus) label,
+.input_name:has(input:not(:placeholder-shown)) label,
+.input_password:has(input:focus) label,
+.input_password:has(input:not(:placeholder-shown)) label {
+    top: -6px;
+    font-size: 0.80rem;
+}
+
+.input_name_group #name,
+.input_password_group #password {
+    width: 100%;
+}
+
+.input_name_group,
+.input_password_group {
+    position: relative;
+}
+
+.input_name_group i,
+.input_password_group i {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+input {
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid var(--color-primary);
+    outline: none;
+    padding: 10px 30px 10px 0px;
+}
+
+.container_access {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    & button {
+        background-color: var(--color-primary);
+        border: none;
+        padding: 12px;
+        font-family: "BBH Bartle", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        color: var(--color-text-dark);
+        border-radius: 5px;
+        transition: var(--transition-fast);
+        cursor: pointer;
+    }
+
+    & button:hover {
+        background-color: var(--color-text-hover);
+    }
+
+    & div {
+        display: flex;
+        justify-content: space-between;
+
+        & label span {
+            position: relative;
+            display: inline-block;
+            color: var(--color-primary);
+            cursor: pointer;
+        }
+
+        & label span::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -4px;
+            width: 0;
+            height: 2px;
+            background-color: var(--color-primary);
+            transition: width 0.3s ease;
+        }
+
+        & label span:hover::before {
+            width: 100%;
+        }
+
+        & a label {
+            cursor: pointer;
+        }
+    }
+
+}
+
+@media (max-width: 600px) {
+    .login {
+        width: 300px;
+    }
+}
