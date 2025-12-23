@@ -13,7 +13,7 @@
 
 
     /* Cor para fonts */
-    --text-dark: #000;
+    --text-dark: #7D7D7D;
     --text-light: #fff;
     --text-yellow: #ffc757;
 
@@ -78,6 +78,7 @@ header {
 
 
             & .logo {
+                display: flex;
                 width: 25%;
 
                 & img {
